@@ -33,7 +33,8 @@ namespace Homework_19
             string NewGenusParam = NewGenus.Text;
             string NewBreedParam = NewBreed.Text;
             string NewAgeParam = NewAge.Text;
-
+            MessageBox.Show($"NewclassParam={NewclassParam}{null,50} NewGenusParam={NewGenusParam}{null,50} NewBreedParam={NewBreedParam}{null,50}" +
+                $" NewAgeParam={NewAgeParam}");
             fauna.Add(FaunaFactory.GetFauna($"{NewclassParam}", $"{NewGenusParam }", $"{NewBreedParam}", $"{NewAgeParam}"));
             Close();
         }

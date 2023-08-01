@@ -59,10 +59,18 @@
       <DependentUpon>AddAnimal.xaml</DependentUpon>
     </Compile>
     <Compile Include="Amphibians.cs" />
+    <Compile Include="AnimalDocx.cs" />
+    <Compile Include="AnimalPdf.cs" />
+    <Compile Include="AnimalWriter.cs" />
+    <Compile Include="AnimalXlsx.cs" />
     <Compile Include="Bird.cs" />
     <Compile Include="FaunaFactory.cs" />
+    <Compile Include="IAnimalSave.cs" />
     <Compile Include="NewClass.cs" />
     <Compile Include="RepositoryAnimal.cs" />
+    <Compile Include="saveAnimal.xaml.cs">
+      <DependentUpon>saveAnimal.xaml</DependentUpon>
+    </Compile>
     <Page Include="AddAnimal.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -80,6 +88,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="saveAnimal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Mammal.cs" />

@@ -43,5 +43,11 @@ namespace Homework_19
             ListFauna.ItemsSource = list;
 
         }
+
+        private void saveAnimal_Click(object sender, RoutedEventArgs e)
+        {
+            saveAnimal save=new saveAnimal();
+            save.ShowDialog();
+        }
     }
 }
