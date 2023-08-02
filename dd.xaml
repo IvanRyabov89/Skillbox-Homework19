@@ -1,0 +1,26 @@
+﻿<Window x:Class="Homework_19.dd"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Homework_19"
+        mc:Ignorable="d"
+        Title="dd" Height="450" Width="800">
+    <Grid>
+        <ListView x:Name="view" d:ItemsSource="{d:SampleData ItemCount=5}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Класс" DisplayMemberBinding="{Binding Class}"
+                                    Width="200"/>
+                    <GridViewColumn Header="Род" DisplayMemberBinding="{Binding Genus}"
+                                    Width="200"/>
+                    <GridViewColumn Header="Порода" DisplayMemberBinding="{Binding Breed}"
+                                    Width="200"/>
+                    <GridViewColumn Header="Возраст" DisplayMemberBinding="{Binding Age}"
+                                    Width="100" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+    </Grid>
+</Window>

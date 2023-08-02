@@ -39,8 +39,9 @@ namespace Homework_19
         {
             AddAnimal add = new AddAnimal();
             add.ShowDialog();
-            List<IFauna> list = fauna.PrintRepository();
-            ListFauna.ItemsSource = list;
+            //List<IFauna> list = fauna.PrintRepository();
+            //MessageBox.Show($"{list.Count}");
+            //ListFauna.ItemsSource = list;
 
         }
 
