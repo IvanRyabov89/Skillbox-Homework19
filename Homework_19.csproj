@@ -64,8 +64,8 @@
     <Compile Include="AnimalWriter.cs" />
     <Compile Include="AnimalXlsx.cs" />
     <Compile Include="Bird.cs" />
-    <Compile Include="dd.xaml.cs">
-      <DependentUpon>dd.xaml</DependentUpon>
+    <Compile Include="Animal.xaml.cs">
+      <DependentUpon>Animal.xaml</DependentUpon>
     </Compile>
     <Compile Include="FaunaFactory.cs" />
     <Compile Include="IAnimalSave.cs" />
@@ -78,7 +78,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="dd.xaml">
+    <Page Include="Animal.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

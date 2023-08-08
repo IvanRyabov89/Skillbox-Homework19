@@ -10,37 +10,32 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.Collections.ObjectModel;
 
 namespace Homework_19
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для dd.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Animal : Window
     {
         RepositoryAnimal fauna = new RepositoryAnimal();
-        public MainWindow()
+        public Animal()
         {
             InitializeComponent();
-            //fauna.Add(FaunaFactory.GetFauna("Птицы", "Дятловые", "Дятел красноголовый", "3"));
-            //List<IFauna> list = fauna.PrintRepository();
-            //ListFauna.ItemsSource = list;
-            Animal animal = new Animal();
-            animal.ShowDialog();
+            fauna.Add(FaunaFactory.GetFauna("Птицы", "Дятловые", "Дятел красноголовый", "3"));
+            List<IFauna> list = fauna.PrintRepository();
+            ListFauna.ItemsSource = list;
         }
-
         private void Cancel_Click(object sender, RoutedEventArgs e)
         {
             Close();
         }
-        public void Massiv(string[]mas)
+        public void Massiv(string[] mas)
         {
             fauna.Add(FaunaFactory.GetFauna($"{mas[0]}", $"{mas[1]}", $"{mas[2]}", $"{mas[3]}"));
             List<IFauna> list = fauna.PrintRepository();
-            ListFauna.ItemsSource = list; 
+            ListFauna.ItemsSource = list;
         }
         private void Add_Click(object sender, RoutedEventArgs e)
         {

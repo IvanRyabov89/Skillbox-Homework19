@@ -1,12 +1,12 @@
-﻿<Window x:Class="Homework_19.MainWindow"
+﻿<Window x:Class="Homework_19.Animal"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Homework_19"
         mc:Ignorable="d"
-        Title="MainWindow" Height="456" Width="761.13">
-    <Grid Margin="0,0,0,-6">
+        Title="Animal" Height="461" Width="761">
+    <Grid Margin="0,0,2,5">
         <ListView x:Name="ListFauna"
                   Height="334" Margin="10,10,23,0" VerticalAlignment="Top">
             <ListView.View>
@@ -23,11 +23,11 @@
             </ListView.View>
         </ListView>
         <Button x:Name="Add" Content="Добавить" HorizontalAlignment="Left"
-                Margin="64,355,0,0" VerticalAlignment="Top" Width="139" Height="47" Click="Add_Click"
-                RenderTransformOrigin="0.288,0.554"/>
+                Margin="64,355,0,0" VerticalAlignment="Top" Width="139" Height="47" Click="Add_Click" RenderTransformOrigin="0.288,0.554"/>
         <Button x:Name="Cancel" Content="Закрыть" HorizontalAlignment="Left"
                 Margin="551,355,0,0" VerticalAlignment="Top" Width="139" Height="47" Click="Cancel_Click"/>
-        <Button x:Name="saveAnimal" Content="Сохранить" HorizontalAlignment="Left" Margin="308,355,0,0" 
-                VerticalAlignment="Top" Width="139" Height="47" Click="saveAnimal_Click"/>
+        <Button x:Name="saveAnimal" Content="Сохранить" HorizontalAlignment="Left" Margin="308,355,0,0" VerticalAlignment="Top" Width="139" Height="47" Click="saveAnimal_Click"/>
+
+
     </Grid>
 </Window>

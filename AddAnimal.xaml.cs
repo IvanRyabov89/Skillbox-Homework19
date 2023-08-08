@@ -35,10 +35,11 @@ namespace Homework_19
             string NewAgeParam = NewAge.Text;
             //MessageBox.Show($"NewclassParam={NewclassParam}{null,50} NewGenusParam={NewGenusParam}{null,50} NewBreedParam={NewBreedParam}{null,50}" +
             //    $" NewAgeParam={NewAgeParam}");
-            fauna.Add(FaunaFactory.GetFauna($"{NewclassParam}", $"{NewGenusParam }", $"{NewBreedParam}", $"{NewAgeParam}"));
-
-            dd d = new dd();
-            d.ShowDialog();
+            string[] massiv=new string[] { NewclassParam,NewGenusParam,NewBreedParam,NewAgeParam };
+            //MainWindow main = new MainWindow();
+            //main.Massiv(massiv);
+            Animal animal = new Animal();
+            animal.Massiv(massiv);
             Close();
         }
 
