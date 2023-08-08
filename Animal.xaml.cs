@@ -36,8 +36,10 @@ namespace Homework_19
             fauna.Add(FaunaFactory.GetFauna($"{mas[0]}", $"{mas[1]}", $"{mas[2]}", $"{mas[3]}"));
             List<IFauna> list = fauna.PrintRepository();
             ListFauna.ItemsSource = list;
-            Animal animal= new Animal();
-            animal.Refresh();
+            //Animal animal = new Animal();
+            //animal.Refresh();
+            ListFauna.Items.Refresh();
+            
         }
 
        
