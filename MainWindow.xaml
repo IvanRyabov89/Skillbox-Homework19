@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="456" Width="761.13">
     <Grid Margin="0,0,0,-6">
-        <ListView x:Name="ListFauna"
+        <!--<ListView x:Name="ListFauna"
                   Height="334" Margin="10,10,23,0" VerticalAlignment="Top">
             <ListView.View>
                 <GridView>
@@ -27,7 +27,7 @@
                 RenderTransformOrigin="0.288,0.554"/>
         <Button x:Name="Cancel" Content="Закрыть" HorizontalAlignment="Left"
                 Margin="551,355,0,0" VerticalAlignment="Top" Width="139" Height="47" Click="Cancel_Click"/>
-        <Button x:Name="saveAnimal" Content="Сохранить" HorizontalAlignment="Left" Margin="308,355,0,0" 
-                VerticalAlignment="Top" Width="139" Height="47" Click="saveAnimal_Click"/>
+        <Button x:Name="saveAnimal" Content="Сохранить" HorizontalAlignment="Left" Margin="308,355,0,0"--> 
+                <!--VerticalAlignment="Top" Width="139" Height="47" Click="saveAnimal_Click"/>-->
     </Grid>
 </Window>

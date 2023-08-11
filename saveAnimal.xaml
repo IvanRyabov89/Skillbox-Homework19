@@ -7,6 +7,22 @@
         mc:Ignorable="d"
         Title="saveAnimal" Height="450" Width="800">
     <Grid>
-        
+        <Label Content="Имя файла для сохранения" HorizontalAlignment="Left" Margin="44,71,0,0" VerticalAlignment="Top" Width="244" RenderTransformOrigin="0.5,0.5" FontSize="18">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.536"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label Content="Формат сохранения файла" HorizontalAlignment="Left" Margin="44,150,0,0" VerticalAlignment="Top" Width="244" FontSize="18"/>
+        <TextBox x:Name="NameFile" HorizontalAlignment="Left" Margin="320,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="377" Height="32" FontSize="18"/>
+        <ComboBox x:Name="FormatFile" HorizontalAlignment="Left" Margin="320,158,0,0" VerticalAlignment="Top" Width="266">
+        <ComboBoxItem Content="Docx"/>
+        <ComboBoxItem Content="Pdf"/>
+        <ComboBoxItem Content="Xlsx"/>
+        </ComboBox>
     </Grid>
 </Window>

@@ -34,22 +34,21 @@ namespace Homework_19
         public void Massiv(string[] mas)
         {
             fauna.Add(FaunaFactory.GetFauna($"{mas[0]}", $"{mas[1]}", $"{mas[2]}", $"{mas[3]}"));
-            List<IFauna> list = fauna.PrintRepository();
-            ListFauna.ItemsSource = list;
-            //Animal animal = new Animal();
-            //animal.Refresh();
-            ListFauna.Items.Refresh();
+            List<IFauna> listing = fauna.PrintRepository();
+            ListFauna.ItemsSource = listing;
+            //ListFauna.Items.Refresh();
             
         }
-
-       
-
         private void Add_Click(object sender, RoutedEventArgs e)
         {
-            AddAnimal add = new AddAnimal();
+            Animal animal = new Animal();
+            AddAnimal add = new AddAnimal(animal);
             add.ShowDialog();
         }
-
+        public void ReFreshAnimal()
+        {
+            ListFauna.Items.Refresh();
+        }
         private void saveAnimal_Click(object sender, RoutedEventArgs e)
         {
             saveAnimal save = new saveAnimal();

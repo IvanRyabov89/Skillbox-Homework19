@@ -32,26 +32,26 @@ namespace Homework_19
             animal.ShowDialog();
         }
 
-        private void Cancel_Click(object sender, RoutedEventArgs e)
-        {
-            Close();
-        }
-        public void Massiv(string[]mas)
-        {
-            fauna.Add(FaunaFactory.GetFauna($"{mas[0]}", $"{mas[1]}", $"{mas[2]}", $"{mas[3]}"));
-            List<IFauna> list = fauna.PrintRepository();
-            ListFauna.ItemsSource = list; 
-        }
-        private void Add_Click(object sender, RoutedEventArgs e)
-        {
-            AddAnimal add = new AddAnimal();
-            add.ShowDialog();
-        }
+        //private void Cancel_Click(object sender, RoutedEventArgs e)
+        //{
+        //    Close();
+        //}
+        //public void Massiv(string[]mas)
+        //{
+        //    fauna.Add(FaunaFactory.GetFauna($"{mas[0]}", $"{mas[1]}", $"{mas[2]}", $"{mas[3]}"));
+        //    List<IFauna> list = fauna.PrintRepository();
+        //    ListFauna.ItemsSource = list; 
+        //}
+        //private void Add_Click(object sender, RoutedEventArgs e)
+        //{
+        //    //AddAnimal add = new AddAnimal();
+        //    //add.ShowDialog();
+        //}
 
-        private void saveAnimal_Click(object sender, RoutedEventArgs e)
-        {
-            saveAnimal save = new saveAnimal();
-            save.ShowDialog();
-        }
+        //private void saveAnimal_Click(object sender, RoutedEventArgs e)
+        //{
+        //    saveAnimal save = new saveAnimal();
+        //    save.ShowDialog();
+        //}
     }
 }

@@ -22,6 +22,7 @@
                 </GridView>
             </ListView.View>
         </ListView>
+       
         <Button x:Name="Add" Content="Добавить" HorizontalAlignment="Left"
                 Margin="64,355,0,0" VerticalAlignment="Top" Width="139" Height="47" Click="Add_Click" RenderTransformOrigin="0.288,0.554"/>
         <Button x:Name="Cancel" Content="Закрыть" HorizontalAlignment="Left"

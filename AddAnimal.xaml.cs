@@ -22,11 +22,16 @@ namespace Homework_19
     public partial class AddAnimal : Window
     {
         RepositoryAnimal fauna = new RepositoryAnimal();
-        public AddAnimal()
+        private Animal parentForm;
+        public AddAnimal(Animal parent)
         {
             InitializeComponent();
+            parentForm = parent;
         }
-
+        private void SomeMethod()
+        {
+            parentForm.ReFreshAnimal();
+        }
         private void Add_Click(object sender, RoutedEventArgs e)
         {
             string NewclassParam = NewClass.Text;
@@ -36,8 +41,6 @@ namespace Homework_19
             //MessageBox.Show($"NewclassParam={NewclassParam}{null,50} NewGenusParam={NewGenusParam}{null,50} NewBreedParam={NewBreedParam}{null,50}" +
             //    $" NewAgeParam={NewAgeParam}");
             string[] massiv=new string[] { NewclassParam,NewGenusParam,NewBreedParam,NewAgeParam };
-            //MainWindow main = new MainWindow();
-            //main.Massiv(massiv);
             Animal animal = new Animal();
             animal.Massiv(massiv);
             Close();

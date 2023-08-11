@@ -22,6 +22,9 @@ namespace Homework_19
         public saveAnimal()
         {
             InitializeComponent();
+            var saveDocx=new AnimalDocx("AnimalDocx");
+            var savePdf = new AnimalPdf("AnimalPdf");
+            var saveXIsx = new AnimalXlsx("AnimalXlsx");
         }
     }
 }
