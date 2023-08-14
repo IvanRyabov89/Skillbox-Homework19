@@ -28,7 +28,7 @@ namespace Homework_19
             InitializeComponent();
             parentForm = parent;
         }
-        private void SomeMethod()
+        public void SomeMethod()
         {
             parentForm.ReFreshAnimal();
         }
@@ -43,6 +43,7 @@ namespace Homework_19
             string[] massiv=new string[] { NewclassParam,NewGenusParam,NewBreedParam,NewAgeParam };
             Animal animal = new Animal();
             animal.Massiv(massiv);
+            SomeMethod();
             Close();
         }
 
