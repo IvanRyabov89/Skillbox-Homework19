@@ -5,9 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Homework_19"
         mc:Ignorable="d"
-        Title="saveAnimal" Height="450" Width="800">
-    <Grid>
-        <Label Content="Имя файла для сохранения" HorizontalAlignment="Left" Margin="44,71,0,0" VerticalAlignment="Top" Width="244" RenderTransformOrigin="0.5,0.5" FontSize="18">
+        Title="saveAnimal" Height="278" Width="882">
+    <Grid Margin="0,0,10,11">
+        <Label Content="Имя файла для сохранения" HorizontalAlignment="Left" Margin="44,71,0,0" VerticalAlignment="Top"
+               Width="244" RenderTransformOrigin="0.5,0.5" FontSize="18">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -17,12 +18,17 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Label Content="Формат сохранения файла" HorizontalAlignment="Left" Margin="44,150,0,0" VerticalAlignment="Top" Width="244" FontSize="18"/>
-        <TextBox x:Name="NameFile" HorizontalAlignment="Left" Margin="320,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="377" Height="32" FontSize="18"/>
-        <ComboBox x:Name="FormatFile" HorizontalAlignment="Left" Margin="320,158,0,0" VerticalAlignment="Top" Width="266">
-        <ComboBoxItem Content="Docx"/>
-        <ComboBoxItem Content="Pdf"/>
-        <ComboBoxItem Content="Xlsx"/>
+        <TextBox x:Name="NameFile" HorizontalAlignment="Left" Margin="320,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top"
+                 Width="377" Height="32" FontSize="18"/>
+        <ComboBox x:Name="FormatFile" HorizontalAlignment="Left" Margin="726,70,0,0" VerticalAlignment="Top" Width="104" Height="32">
+            <ComboBoxItem Content="Docx"/>
+            <ComboBoxItem Content="Pdf"/>
+            <ComboBoxItem Content="Xlsx"/>
         </ComboBox>
+        <Label Content="." HorizontalAlignment="Left" Margin="702,58,0,0" VerticalAlignment="Top" Height="56" Width="24" FontSize="36"/>
+        <Button x:Name="SaveFile" Content="Сохранить" HorizontalAlignment="Left" Margin="182,184,0,0" VerticalAlignment="Top" Width="144"
+                Height="37" FontSize="24" Click="SaveFile_Click"/>
+        <Button x:Name="Exit" Content="Отмена" HorizontalAlignment="Left" Margin="544,184,0,0" VerticalAlignment="Top"
+                Width="144" Height="37" FontSize="24" Click="Exit_Click"/>
     </Grid>
 </Window>

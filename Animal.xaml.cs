@@ -11,13 +11,14 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Collections.ObjectModel;
 
 namespace Homework_19
 {
     /// <summary>
     /// Логика взаимодействия для dd.xaml
     /// </summary>
-    public partial class Animal : Window
+    public partial class Animal : Window 
     {
         RepositoryAnimal fauna = new RepositoryAnimal();
         public Animal()
@@ -25,7 +26,8 @@ namespace Homework_19
             InitializeComponent();
             fauna.Add(FaunaFactory.GetFauna("Птицы", "Дятловые", "Дятел красноголовый", "3"));
             List<IFauna> list = fauna.PrintRepository();
-            ListFauna.ItemsSource = list;
+            ObservableCollection<IFauna> list2 = new ObservableCollection<IFauna>(list as List<IFauna>);
+            ListFauna.ItemsSource= list2;
         }
         private void Cancel_Click(object sender, RoutedEventArgs e)
         {
@@ -35,9 +37,8 @@ namespace Homework_19
         {
             fauna.Add(FaunaFactory.GetFauna($"{mas[0]}", $"{mas[1]}", $"{mas[2]}", $"{mas[3]}"));
             List<IFauna> listing = fauna.PrintRepository();
-            ListFauna.ItemsSource = listing;
-            //ListFauna.Items.Refresh();
-            
+            ObservableCollection<IFauna> list2 = new ObservableCollection<IFauna>(listing as List<IFauna>);
+            ListFauna.ItemsSource = list2;            
         }
         private void Add_Click(object sender, RoutedEventArgs e)
         {
@@ -54,5 +55,6 @@ namespace Homework_19
             saveAnimal save = new saveAnimal();
             save.ShowDialog();
         }
+
     }
 }

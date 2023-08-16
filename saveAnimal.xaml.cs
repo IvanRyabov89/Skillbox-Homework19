@@ -22,9 +22,38 @@ namespace Homework_19
         public saveAnimal()
         {
             InitializeComponent();
-            var saveDocx=new AnimalDocx("AnimalDocx");
-            var savePdf = new AnimalPdf("AnimalPdf");
-            var saveXIsx = new AnimalXlsx("AnimalXlsx");
+        }
+
+        private void SaveFile_Click(object sender, RoutedEventArgs e)
+        {
+            string name = NameFile.Text;
+            string format= FormatFile.Text;
+            switch (format)
+            {
+                case "Docx":
+                    var saveDocx = new AnimalDocx(name);
+                    AnimalWriter writer = new AnimalWriter(saveDocx);
+                    writer.Save();
+                    break;
+
+                case "Pdf":
+                    var savePdf = new AnimalPdf(name);
+                    AnimalWriter writer1 = new AnimalWriter(savePdf);
+                    writer1.Save();
+                    break;
+
+                case "Xlsx":
+                    var saveXlsx = new AnimalXlsx(name);
+                    AnimalWriter writer2 = new AnimalWriter(saveXlsx);
+                    writer2.Save();
+                    break;
+            }
+            Close();
+        }
+
+        private void Exit_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }

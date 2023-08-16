@@ -12,6 +12,7 @@ namespace Homework_19
     /// </summary>
     class RepositoryAnimal
     {
+       
         List<IFauna> fauna;
         public RepositoryAnimal()
         {
