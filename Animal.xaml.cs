@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Collections.ObjectModel;
+using System.Collections;
 
 namespace Homework_19
 {
@@ -20,41 +21,51 @@ namespace Homework_19
     /// </summary>
     public partial class Animal : Window 
     {
-        RepositoryAnimal fauna = new RepositoryAnimal();
+        ObservableCollection<IFauna> list2 = new ObservableCollection<IFauna>();
+        //RepositoryAnimal fauna = new RepositoryAnimal();
         public Animal()
         {
             InitializeComponent();
-            fauna.Add(FaunaFactory.GetFauna("Птицы", "Дятловые", "Дятел красноголовый", "3"));
-            List<IFauna> list = fauna.PrintRepository();
-            ObservableCollection<IFauna> list2 = new ObservableCollection<IFauna>(list as List<IFauna>);
-            ListFauna.ItemsSource= list2;
+            ListFauna.ItemsSource = list2;
+            list2.Add(FaunaFactory.GetFauna("Птицы", "Дятловые", "Дятел красноголовый", "3"));
+            //List<IFauna> list = fauna.PrintRepository();
+            //ObservableCollection<IFauna> list2 = new ObservableCollection<IFauna>(list as List<IFauna>);
+            //ListFauna.ItemsSource= list2;
         }
         private void Cancel_Click(object sender, RoutedEventArgs e)
         {
             Close();
         }
-        public void Massiv(string[] mas)
-        {
-            fauna.Add(FaunaFactory.GetFauna($"{mas[0]}", $"{mas[1]}", $"{mas[2]}", $"{mas[3]}"));
-            List<IFauna> listing = fauna.PrintRepository();
-            ObservableCollection<IFauna> list2 = new ObservableCollection<IFauna>(listing as List<IFauna>);
-            ListFauna.ItemsSource = list2;            
-        }
+        
         private void Add_Click(object sender, RoutedEventArgs e)
         {
-            Animal animal = new Animal();
-            AddAnimal add = new AddAnimal(animal);
+            AddAnimal add = new AddAnimal(this);
             add.ShowDialog();
         }
-        public void ReFreshAnimal()
+        public void AddFauna(IFauna fauna)
         {
-            ListFauna.Items.Refresh();
+            list2.Add(fauna);
         }
+        //public void Massiv(string[] mas)
+        //{
+        //    fauna.Add(FaunaFactory.GetFauna($"{mas[0]}", $"{mas[1]}", $"{mas[2]}", $"{mas[3]}"));
+        //    List<IFauna> listing = fauna.PrintRepository();
+        //    ObservableCollection<IFauna> list2 = new ObservableCollection<IFauna>(listing as List<IFauna>);
+        //    ListFauna.ItemsSource = list2;
+        //}
+        //public void ReFreshAnimal()
+        //{
+        //    ListFauna.Items.Refresh();
+        //}
         private void saveAnimal_Click(object sender, RoutedEventArgs e)
         {
+
             saveAnimal save = new saveAnimal();
             save.ShowDialog();
         }
-
+        public ObservableCollection<IFauna> Fauna()
+        {
+            return list2;
+        }
     }
 }

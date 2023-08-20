@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Homework_19
 {
-    interface IFauna
+    public interface IFauna
     {
         /// <summary>
         /// род

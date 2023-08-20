@@ -21,13 +21,10 @@ namespace Homework_19
     /// </summary>
     public partial class MainWindow : Window
     {
-        RepositoryAnimal fauna = new RepositoryAnimal();
+        //RepositoryAnimal fauna = new RepositoryAnimal();
         public MainWindow()
         {
             InitializeComponent();
-            //fauna.Add(FaunaFactory.GetFauna("Птицы", "Дятловые", "Дятел красноголовый", "3"));
-            //List<IFauna> list = fauna.PrintRepository();
-            //ListFauna.ItemsSource = list;
             Animal animal = new Animal();
             animal.ShowDialog();
         }

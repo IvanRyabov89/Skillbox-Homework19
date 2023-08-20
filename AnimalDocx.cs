@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections.ObjectModel;
 
 namespace Homework_19
 {
@@ -14,15 +15,18 @@ namespace Homework_19
         {
             this.nameFile = NameFile;
         }
-        private List<IFauna> CreateDocx(List<IFauna> Animal)
+        private ObservableCollection<IFauna> CreateDocx()
         {
-            return Animal;
+            Animal animal= new Animal();
+            ObservableCollection<IFauna> fauna = new ObservableCollection<IFauna>();
+            fauna= animal.Fauna();
+            return fauna;
         }
-        public void SaveAnimal(List<IFauna> Animal) 
+        public void SaveAnimal(ObservableCollection<IFauna> fauna) 
         {
             using (StreamWriter writer = new StreamWriter($"{nameFile}.docx"))
             {
-                writer.WriteLine(CreateDocx(Animal));
+                writer.WriteLine(CreateDocx());
             }
         }  
     }

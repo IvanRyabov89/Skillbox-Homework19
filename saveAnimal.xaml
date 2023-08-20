@@ -24,6 +24,7 @@
             <ComboBoxItem Content="Docx"/>
             <ComboBoxItem Content="Pdf"/>
             <ComboBoxItem Content="Xlsx"/>
+            <ComboBoxItem Content="Txt"/>
         </ComboBox>
         <Label Content="." HorizontalAlignment="Left" Margin="702,58,0,0" VerticalAlignment="Top" Height="56" Width="24" FontSize="36"/>
         <Button x:Name="SaveFile" Content="Сохранить" HorizontalAlignment="Left" Margin="182,184,0,0" VerticalAlignment="Top" Width="144"

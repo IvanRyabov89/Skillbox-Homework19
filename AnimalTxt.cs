@@ -8,26 +8,33 @@ using System.Threading.Tasks;
 
 namespace Homework_19
 {
-    class AnimalPdf : IAnimalSave
+    class AnimalTxt:IAnimalSave
     {
         private string nameFile;
-        public AnimalPdf(string NameFile)
+        public AnimalTxt(string NameFile)
         {
             this.nameFile = NameFile;
         }
-        private ObservableCollection<IFauna> CreatePdf()
+        private ObservableCollection<IFauna> CreateTxt()
         {
             Animal animal = new Animal();
             ObservableCollection<IFauna> fauna = new ObservableCollection<IFauna>();
             fauna = animal.Fauna();
             return fauna;
+
         }
-        public void SaveAnimal(ObservableCollection<IFauna> Animal)
+        public void SaveAnimal(ObservableCollection<IFauna> fauna)
         {
-            using (StreamWriter writer = new StreamWriter($"{nameFile}.pdf"))
+            string name = $"{nameFile}.txt" ;
+            using (StreamWriter writer = new StreamWriter(name, false))
             {
-                writer.WriteLine(CreatePdf());
+
+                writer.WriteLine(CreateTxt());
             }
+            //using (FileStream stream=new FileStream(name,FileMode.OpenOrCreate))
+            //{
+            //    stream.
+            //}
         }
     }
 }

@@ -61,6 +61,7 @@
     <Compile Include="Amphibians.cs" />
     <Compile Include="AnimalDocx.cs" />
     <Compile Include="AnimalPdf.cs" />
+    <Compile Include="AnimalTxt.cs" />
     <Compile Include="AnimalWriter.cs" />
     <Compile Include="AnimalXlsx.cs" />
     <Compile Include="Bird.cs" />

@@ -7,43 +7,36 @@ using System.Threading.Tasks;
 using static System.Net.Mime.MediaTypeNames;
 using System.Windows.Shapes;
 using System.Windows.Documents;
+using System.Collections.ObjectModel;
 
 namespace Homework_19
 {
     class AnimalXlsx : IAnimalSave
     {
+        ObservableCollection<IFauna> fauna = new ObservableCollection<IFauna>();
         private string nameFile;
         public AnimalXlsx(string NameFile)
         {
             this.nameFile = NameFile;
         }
-        async void Method(List<IFauna> Animal)
+       
+        private ObservableCollection<IFauna> CreateXlsx(ObservableCollection<IFauna> Animal)
         {
-            //string path = $"{nameFile}.xlsx";
-            //using (FileStream fstream = new FileStream(path, FileMode.OpenOrCreate))
-            //{
-            //    // преобразуем строку в байты
-            //    byte[] buffer = Encoding.Default.GetBytes(Animal);
-            //    // запись массива байтов в файл
-            //    await fstream.WriteAsync(buffer, 0, buffer.Length);
-            //    Console.WriteLine("Текст записан в файл");
-            //}
-        }
-        private List<IFauna> CreateXlsx(List<IFauna> Animal)
-        {
+            Animal animal = new Animal();
+            ObservableCollection<IFauna> fauna = new ObservableCollection<IFauna>();
+            fauna = animal.Fauna();
+            return fauna;
+
             //string path = $"{nameFile}.xlsx";
             //FileStream aFile = new FileStream(path, FileMode.Create);
             //StreamWriter sw = new StreamWriter(aFile);
             //foreach (IFauna fauna in Animal)
             //{
-
             //    sw.WriteLine(fauna);
             //}
-
-            //Method(Animal);
-            return Animal;
+            //return Animal;
         }
-        public void SaveAnimal(List<IFauna> Animal)
+        public void SaveAnimal(ObservableCollection<IFauna> Animal)
         {
             using (StreamWriter writer = new StreamWriter($"{nameFile}.xlsx"))
             {

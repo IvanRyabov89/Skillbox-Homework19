@@ -28,22 +28,21 @@ namespace Homework_19
             InitializeComponent();
             parentForm = parent;
         }
-        public void SomeMethod()
-        {
-            parentForm.ReFreshAnimal();
-        }
         private void Add_Click(object sender, RoutedEventArgs e)
         {
             string NewclassParam = NewClass.Text;
             string NewGenusParam = NewGenus.Text;
             string NewBreedParam = NewBreed.Text;
             string NewAgeParam = NewAge.Text;
-            //MessageBox.Show($"NewclassParam={NewclassParam}{null,50} NewGenusParam={NewGenusParam}{null,50} NewBreedParam={NewBreedParam}{null,50}" +
-            //    $" NewAgeParam={NewAgeParam}");
-            string[] massiv=new string[] { NewclassParam,NewGenusParam,NewBreedParam,NewAgeParam };
-            Animal animal = new Animal();
-            animal.Massiv(massiv);
-            SomeMethod();
+           
+            IFauna newFauna = FaunaFactory.GetFauna(NewclassParam, NewGenusParam, NewBreedParam, NewAgeParam);
+
+            parentForm.AddFauna(newFauna);
+
+            //string[] massiv=new string[] { NewclassParam,NewGenusParam,NewBreedParam,NewAgeParam };
+            //Animal animal = new Animal();
+            //animal.Massiv(massiv);
+            //SomeMethod();
             Close();
         }
 
