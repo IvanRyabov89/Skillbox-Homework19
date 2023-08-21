@@ -10,6 +10,7 @@ namespace Homework_19
 {
     class AnimalTxt:IAnimalSave
     {
+        Animal animal = new Animal();
         private string nameFile;
         public AnimalTxt(string NameFile)
         {
@@ -17,7 +18,6 @@ namespace Homework_19
         }
         private ObservableCollection<IFauna> CreateTxt()
         {
-            Animal animal = new Animal();
             ObservableCollection<IFauna> fauna = new ObservableCollection<IFauna>();
             fauna = animal.Fauna();
             return fauna;
@@ -26,15 +26,12 @@ namespace Homework_19
         public void SaveAnimal(ObservableCollection<IFauna> fauna)
         {
             string name = $"{nameFile}.txt" ;
-            using (StreamWriter writer = new StreamWriter(name, false))
+            using (StreamWriter writer = new StreamWriter(name))
             {
-
-                writer.WriteLine(CreateTxt());
+                ObservableCollection<IFauna> list = CreateTxt();
+                writer.Write(list);
             }
-            //using (FileStream stream=new FileStream(name,FileMode.OpenOrCreate))
-            //{
-            //    stream.
-            //}
+            
         }
     }
 }
