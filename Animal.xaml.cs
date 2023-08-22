@@ -22,15 +22,11 @@ namespace Homework_19
     public partial class Animal : Window 
     {
         ObservableCollection<IFauna> list2 = new ObservableCollection<IFauna>();
-        //RepositoryAnimal fauna = new RepositoryAnimal();
         public Animal()
         {
             InitializeComponent();
             ListFauna.ItemsSource = list2;
             list2.Add(FaunaFactory.GetFauna("Птицы", "Дятловые", "Дятел красноголовый", "3"));
-            //List<IFauna> list = fauna.PrintRepository();
-            //ObservableCollection<IFauna> list2 = new ObservableCollection<IFauna>(list as List<IFauna>);
-            //ListFauna.ItemsSource= list2;
         }
         private void Cancel_Click(object sender, RoutedEventArgs e)
         {
@@ -46,20 +42,9 @@ namespace Homework_19
         {
             list2.Add(fauna);
         }
-        //public void Massiv(string[] mas)
-        //{
-        //    fauna.Add(FaunaFactory.GetFauna($"{mas[0]}", $"{mas[1]}", $"{mas[2]}", $"{mas[3]}"));
-        //    List<IFauna> listing = fauna.PrintRepository();
-        //    ObservableCollection<IFauna> list2 = new ObservableCollection<IFauna>(listing as List<IFauna>);
-        //    ListFauna.ItemsSource = list2;
-        //}
-        //public void ReFreshAnimal()
-        //{
-        //    ListFauna.Items.Refresh();
-        //}
+        
         private void saveAnimal_Click(object sender, RoutedEventArgs e)
         {
-
             saveAnimal save = new saveAnimal();
             save.ShowDialog();
         }

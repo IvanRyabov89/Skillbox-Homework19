@@ -26,7 +26,11 @@ namespace Homework_19
         {
             using (StreamWriter writer = new StreamWriter($"{nameFile}.pdf"))
             {
-                writer.WriteLine(CreatePdf());
+                ObservableCollection<IFauna> list = CreatePdf();
+                foreach (IFauna animal in list)
+                {
+                    writer.WriteLine(animal);
+                }
             }
         }
     }

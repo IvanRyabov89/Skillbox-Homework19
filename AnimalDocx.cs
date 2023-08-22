@@ -5,11 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Collections.ObjectModel;
+using System.Windows.Controls;
 
 namespace Homework_19
 {
     class AnimalDocx:IAnimalSave
     {
+        ObservableCollection<IFauna> fauna = new ObservableCollection<IFauna>();
+        Animal animal = new Animal();
         private string nameFile;
         public AnimalDocx(string NameFile)
         {
@@ -17,17 +20,28 @@ namespace Homework_19
         }
         private ObservableCollection<IFauna> CreateDocx()
         {
-            Animal animal= new Animal();
-            ObservableCollection<IFauna> fauna = new ObservableCollection<IFauna>();
             fauna= animal.Fauna();
             return fauna;
         }
         public void SaveAnimal(ObservableCollection<IFauna> fauna) 
         {
-            using (StreamWriter writer = new StreamWriter($"{nameFile}.docx"))
+            string name = $"{nameFile}.docx";
+           
+            string[] massiv = new string[fauna.Count];
+            int i=0 ;
+            using (StreamWriter writer = new StreamWriter(name))
             {
-                writer.WriteLine(CreateDocx());
+                ObservableCollection<IFauna> list = CreateDocx();
+                foreach (IFauna animal in list)
+                {
+                    massiv[i]= Convert.ToString(animal);
+                    //writer.WriteLine(animal);
+                    i++;
+                }
+                
             }
+            File.WriteAllLines(name, massiv);
+            //File.AppendAllText(name, Convert.ToString(animal));
         }  
     }
 }

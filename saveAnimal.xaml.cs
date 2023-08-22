@@ -36,22 +36,22 @@ namespace Homework_19
                     writer.Save();
                     break;
 
-                //case "Pdf":
-                //    var savePdf = new AnimalPdf(name);
-                //    AnimalWriter writer1 = new AnimalWriter(savePdf);
-                //    writer1.Save();
-                //    break;
+                case "Pdf":
+                    var savePdf = new AnimalPdf(name);
+                    AnimalWriter writer1 = new AnimalWriter(savePdf);
+                    writer1.Save();
+                    break;
 
-                //case "Xlsx":
-                //    var saveXlsx = new AnimalXlsx(name);
-                //    AnimalWriter writer2 = new AnimalWriter(saveXlsx);
-                //    writer2.Save();
-                //    break;
+                case "Xlsx":
+                    var saveXlsx = new AnimalXlsx(name);
+                    AnimalWriter writer2 = new AnimalWriter(saveXlsx);
+                    writer2.Save();
+                    break;
 
                 case "Txt":
                     var saveTxt = new AnimalTxt(name);
-                    AnimalWriter writer2 = new AnimalWriter(saveTxt);
-                    writer2.Save();
+                    AnimalWriter writer3 = new AnimalWriter(saveTxt);
+                    writer3.Save();
                     break;
             }
             Close();

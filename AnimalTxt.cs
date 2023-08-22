@@ -29,7 +29,12 @@ namespace Homework_19
             using (StreamWriter writer = new StreamWriter(name))
             {
                 ObservableCollection<IFauna> list = CreateTxt();
-                writer.Write(list);
+                foreach(IFauna a in list)
+                {
+                    writer.WriteLine(a);
+                }
+                
+
             }
             
         }
