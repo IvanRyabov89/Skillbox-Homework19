@@ -21,7 +21,6 @@ namespace Homework_19
             ObservableCollection<IFauna> fauna = new ObservableCollection<IFauna>();
             fauna = animal.Fauna();
             return fauna;
-
         }
         public void SaveAnimal(ObservableCollection<IFauna> fauna)
         {
@@ -33,10 +32,7 @@ namespace Homework_19
                 {
                     writer.WriteLine(a);
                 }
-                
-
             }
-            
         }
     }
 }

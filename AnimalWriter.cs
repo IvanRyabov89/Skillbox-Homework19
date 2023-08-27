@@ -18,7 +18,6 @@ namespace Homework_19
         public void Save()
         {
             Animal animal = new Animal();
-
             Animals = animal.Fauna();
             Mode.SaveAnimal(Animals);
         }

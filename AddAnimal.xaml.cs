@@ -39,10 +39,6 @@ namespace Homework_19
 
             parentForm.AddFauna(newFauna);
 
-            //string[] massiv=new string[] { NewclassParam,NewGenusParam,NewBreedParam,NewAgeParam };
-            //Animal animal = new Animal();
-            //animal.Massiv(massiv);
-            //SomeMethod();
             Close();
         }
 

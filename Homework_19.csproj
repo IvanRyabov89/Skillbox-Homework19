@@ -35,6 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -60,10 +63,12 @@
     </Compile>
     <Compile Include="Amphibians.cs" />
     <Compile Include="AnimalDocx.cs" />
+    <Compile Include="AnimalJson.cs" />
     <Compile Include="AnimalPdf.cs" />
     <Compile Include="AnimalTxt.cs" />
     <Compile Include="AnimalWriter.cs" />
     <Compile Include="AnimalXlsx.cs" />
+    <Compile Include="AnimalXml.cs" />
     <Compile Include="Bird.cs" />
     <Compile Include="Animal.xaml.cs">
       <DependentUpon>Animal.xaml</DependentUpon>
@@ -120,6 +125,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -127,6 +133,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Homework_19_Logic\Homework_19_Logic.csproj">
+      <Project>{d45ed5a3-63e7-4b02-bf91-a9150ed9122d}</Project>
+      <Name>Homework_19_Logic</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

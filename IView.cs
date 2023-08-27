@@ -1,29 +1,30 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Homework_19_Logic
 {
-    public interface IFauna
+    interface IView
     {
         /// <summary>
         /// класс
         /// </summary>
-        string Class { get; set; }
+        string Class { get; }
         /// <summary>
         /// род
         /// </summary>
-        string Genus { get; set; }
+        string Genus { get; }
         /// <summary>
         /// порода
         /// </summary>
-        string Breed { get; set; }
+        string Breed { get; }
         /// <summary>
         /// возраст
         /// </summary>
-        string Age { get; set; }
-
+        string Age { get;}
+        ObservableCollection<IFauna> Animal { set; }
     }
 }

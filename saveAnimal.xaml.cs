@@ -53,6 +53,18 @@ namespace Homework_19
                     AnimalWriter writer3 = new AnimalWriter(saveTxt);
                     writer3.Save();
                     break;
+
+                case "Json":
+                    var saveJson = new AnimalJson(name);
+                    AnimalWriter writer4 = new AnimalWriter(saveJson);
+                    writer4.Save();
+                    break;
+
+                case "Xml":
+                    var saveXml = new AnimalXml(name);
+                    AnimalWriter writer5 = new AnimalWriter(saveXml);
+                    writer5.Save();
+                    break;
             }
             Close();
         }
