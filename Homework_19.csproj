@@ -135,9 +135,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Homework_19_Logic\Homework_19_Logic.csproj">
-      <Project>{d45ed5a3-63e7-4b02-bf91-a9150ed9122d}</Project>
-      <Name>Homework_19_Logic</Name>
+    <ProjectReference Include="..\Homework_19_Logics\Homework_19_Logics.csproj">
+      <Project>{8c601465-90a5-4534-ad07-d9c1f88b7f1f}</Project>
+      <Name>Homework_19_Logics</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

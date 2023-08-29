@@ -21,7 +21,6 @@ namespace Homework_19
     /// </summary>
     public partial class AddAnimal : Window
     {
-        RepositoryAnimal fauna = new RepositoryAnimal();
         private Animal parentForm;
         public AddAnimal(Animal parent)
         {

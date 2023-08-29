@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Homework_19_Logic
+namespace Homework_19
 {
     public interface IFauna
     {
@@ -15,15 +15,15 @@ namespace Homework_19_Logic
         /// <summary>
         /// род
         /// </summary>
-        string Genus { get; set; }
+        string Genus { get;set; }
         /// <summary>
         /// порода
         /// </summary>
-        string Breed { get; set; }
+        string Breed { get;set; }
         /// <summary>
         /// возраст
         /// </summary>
-        string Age { get; set; }
-
+        string Age { get;set; }
+        
     }
 }

@@ -2,14 +2,16 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Homework_19_Logic
+namespace Homework_19_Logics
 {
     public class AddModel:IModel
+
     {
-       private string typeFauna;
+        private string typeFauna;
         /// <summary>
         /// род
         /// </summary>
@@ -24,14 +26,18 @@ namespace Homework_19_Logic
         private string age;
         private ObservableCollection<IFauna> animal;
 
-        public void GetData(string Class, string Genus, string Breed, string Age, ObservableCollection<IFauna> Animal)
+        public void GetData(string Class, string Genus, string Breed, string Age)
         {
-            this.typeFauna=Class;
-            this.genus=Genus;
-            this.breed=Breed;
-            this.age=Age;
-            this.animal=Animal;
+            this.typeFauna = Class;
+            this.genus = Genus;
+            this.breed = Breed;
+            this.age = Age;
+          
         }
-
+        public ObservableCollection<IFauna> Result()
+        {
+            IFauna newFauna = FaunaFactory.GetFauna(typeFauna, genus, breed, age);
+            return animal;
+        }
     }
 }

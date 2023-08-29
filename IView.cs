@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Homework_19_Logic
+namespace Homework_19_Logics
 {
-    interface IView
+    public interface IView
     {
         /// <summary>
         /// класс
@@ -24,7 +24,7 @@ namespace Homework_19_Logic
         /// <summary>
         /// возраст
         /// </summary>
-        string Age { get;}
+        string Age { get; }
         ObservableCollection<IFauna> Animal { set; }
     }
 }
