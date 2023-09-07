@@ -9,35 +9,16 @@ using System.Threading.Tasks;
 namespace Homework_19_Logics
 {
     public class AddModel:IModel
-
     {
-        private string typeFauna;
-        /// <summary>
-        /// род
-        /// </summary>
-        private string genus;
-        /// <summary>
-        /// порода
-        /// </summary>
-        private string breed;
-        /// <summary>
-        /// возраст
-        /// </summary>
-        private string age;
         private ObservableCollection<IFauna> animal;
-
-        public void GetData(string Class, string Genus, string Breed, string Age)
+        public AddModel(ObservableCollection<IFauna> animalCollection)
         {
-            this.typeFauna = Class;
-            this.genus = Genus;
-            this.breed = Breed;
-            this.age = Age;
-          
+            animal= animalCollection;
         }
-        public ObservableCollection<IFauna> Result()
+        public void AddFauna(IFauna newFauna)
         {
-            IFauna newFauna = FaunaFactory.GetFauna(typeFauna, genus, breed, age);
-            return animal;
+            animal.Add(newFauna);
         }
+       
     }
 }

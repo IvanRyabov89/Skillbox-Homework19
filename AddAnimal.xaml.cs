@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Collections.ObjectModel;
+using Homework_19_Logics;
 
 namespace Homework_19
 {
@@ -21,11 +22,15 @@ namespace Homework_19
     /// </summary>
     public partial class AddAnimal : Window
     {
+        private IModel model;
+        private AddModel addModel;
         private Animal parentForm;
-        public AddAnimal(Animal parent)
+        public AddAnimal(Animal parent,IModel model, AddModel addModels)
         {
             InitializeComponent();
             parentForm = parent;
+            this.model = model;
+            addModel = addModels;
         }
         private void Add_Click(object sender, RoutedEventArgs e)
         {
@@ -33,11 +38,9 @@ namespace Homework_19
             string NewGenusParam = NewGenus.Text;
             string NewBreedParam = NewBreed.Text;
             string NewAgeParam = NewAge.Text;
-           
             IFauna newFauna = FaunaFactory.GetFauna(NewclassParam, NewGenusParam, NewBreedParam, NewAgeParam);
-
-            parentForm.AddFauna(newFauna);
-
+            //model.AddFauna((Homework_19_Logics.IFauna)newFauna);
+            addModel.AddFauna((Homework_19_Logics.IFauna)newFauna);
             Close();
         }
 

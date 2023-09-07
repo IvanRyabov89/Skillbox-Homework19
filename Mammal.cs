@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Homework_19
+namespace Homework_19_Logics
 {
     /// <summary>
     /// млекопитающие

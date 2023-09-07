@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Homework_19
+namespace Homework_19_Logics
 {
     class FaunaFactory
     {
@@ -14,12 +14,12 @@ namespace Homework_19
                              string Age)
         {
             switch (TypeFauna)
-                {
-                case "Млекопитающие": return new Mammal(Genus,Breed,Age);
-                case "Птицы": return new Bird(Genus,Breed,Age);
+            {
+                case "Млекопитающие": return new Mammal(Genus, Breed, Age);
+                case "Птицы": return new Bird(Genus, Breed, Age);
                 case "Земноводные": return new Amphibians(Genus, Breed, Age);
                 default: return new NewClass();
-                }
+            }
         }
     }
 }

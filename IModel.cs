@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Homework_19_Logics
 {
-    interface IModel
-    {
-        void GetData(string Class, string Genus, string Breed, string Age);
-        ObservableCollection<IFauna> Result();
+   public  interface IModel
+   {
+       
+        void AddFauna(IFauna fauna);
     }
 }

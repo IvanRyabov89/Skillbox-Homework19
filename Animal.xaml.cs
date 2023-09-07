@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Collections.ObjectModel;
 using System.Collections;
+using Homework_19_Logics;
 
 namespace Homework_19
 {
@@ -21,12 +22,15 @@ namespace Homework_19
     /// </summary>
     public partial class Animal : Window 
     {
+        private IModel model;
+        //private AddModel addModel;
         ObservableCollection<IFauna> list2 = new ObservableCollection<IFauna>();
         public Animal()
         {
             InitializeComponent();
             ListFauna.ItemsSource = list2;
             list2.Add(FaunaFactory.GetFauna("Птицы", "Дятловые", "Дятел красноголовый", "3"));
+            
         }
         private void Cancel_Click(object sender, RoutedEventArgs e)
         {
@@ -35,7 +39,9 @@ namespace Homework_19
         
         private void Add_Click(object sender, RoutedEventArgs e)
         {
-            AddAnimal add = new AddAnimal(this);
+            Animal animal= new Animal();
+            AddModel addModel = new AddModel(list2);
+            AddAnimal add = new AddAnimal(animal,model,addModel);
             add.ShowDialog();
         }
         public void AddFauna(IFauna fauna)
@@ -52,5 +58,6 @@ namespace Homework_19
         {
             return list2;
         }
+       
     }
 }
