@@ -10,15 +10,18 @@ namespace Homework_19_Logics
 {
     public class AddModel:IModel
     {
-        public ObservableCollection<IFauna> animal;
+        public static  ObservableCollection<IFauna> animal;
         public AddModel(ObservableCollection<IFauna> animalCollection)
         {
-            animal= animalCollection;
+            animal = animalCollection;
         }
         public void AddFauna(IFauna newFauna)
         {
             animal.Add(newFauna);
         }
-       
+       public ObservableCollection<IFauna> Fauna()
+       {
+            return animal;
+       }
     }
 }
