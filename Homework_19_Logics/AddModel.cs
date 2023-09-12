@@ -10,7 +10,7 @@ namespace Homework_19_Logics
 {
     public class AddModel:IModel
     {
-        private ObservableCollection<IFauna> animal;
+        public ObservableCollection<IFauna> animal;
         public AddModel(ObservableCollection<IFauna> animalCollection)
         {
             animal= animalCollection;

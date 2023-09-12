@@ -4,19 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Collections.ObjectModel;
+using Homework_19;
 
 namespace Homework_19_Logics
 {
     public  class Presentor
     {
+        Homework_19.Animal animal = new Homework.Animal();
         IFauna fauna;
         IView view;
         IModel model;
         public Presentor(IView View)
         {
-            ObservableCollection<IFauna> collections = Homework_19.Animal.Fauna();
+            ObservableCollection<IFauna> collections = animal.Fauna();
             this.view = View;
-            model=new AddModel(collections);
+            model = new AddModel(collections);
         }
 
         public void Result()
