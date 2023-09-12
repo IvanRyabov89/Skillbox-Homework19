@@ -24,24 +24,24 @@ namespace Homework_19
     {
         private IModel model;
         //private AddModel addModel;
-        ObservableCollection<IFauna> list2 = new ObservableCollection<IFauna>();
+        public ObservableCollection<IFauna> list2 = new ObservableCollection<IFauna>();
         public Animal()
         {
             InitializeComponent();
             ListFauna.ItemsSource = list2;
-            list2.Add(FaunaFactory.GetFauna("Птицы", "Дятловые", "Дятел красноголовый", "3"));
+            //list2.Add(FaunaFactory.GetFauna("Птицы", "Дятловые", "Дятел красноголовый", "3"));
             
         }
         private void Cancel_Click(object sender, RoutedEventArgs e)
         {
             Close();
         }
-        
+
         private void Add_Click(object sender, RoutedEventArgs e)
         {
-            Animal animal= new Animal();
+            Animal animal = new Animal();
             AddModel addModel = new AddModel(list2);
-            AddAnimal add = new AddAnimal(animal,model,addModel);
+            AddAnimal add = new AddAnimal(animal, model, addModel);
             add.ShowDialog();
         }
         public void AddFauna(IFauna fauna)
