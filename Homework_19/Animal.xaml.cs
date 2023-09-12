@@ -23,11 +23,11 @@ namespace Homework_19
     public partial class Animal : Window 
     {
         private IModel model;
-        //private AddModel addModel;
-        public ObservableCollection<IFauna> list2 = new ObservableCollection<IFauna>();
+        public static ObservableCollection<IFauna> list2 = new ObservableCollection<IFauna>();
         public Animal()
         {
             InitializeComponent();
+
             ListFauna.ItemsSource = list2;
             //list2.Add(FaunaFactory.GetFauna("Птицы", "Дятловые", "Дятел красноголовый", "3"));
             
