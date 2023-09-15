@@ -10,7 +10,7 @@ namespace Homework_19_Logics
 {
     public  class Presentor
     {
-        Homework_19.Animal animal = new Homework.Animal();
+       Animal animal = new Animal();
         IFauna fauna;
         IView view;
         IModel model;
