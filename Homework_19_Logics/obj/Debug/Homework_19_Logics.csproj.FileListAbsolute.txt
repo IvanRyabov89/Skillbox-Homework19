@@ -1,0 +1,9 @@
+C:\Users\Иван\source\repos\Homework_19\Homework_19_Logics\obj\Debug\Homework_19_Logics.csproj.AssemblyReference.cache
+C:\Users\Иван\source\repos\Homework_19\Homework_19_Logics\obj\Debug\Homework_19_Logics.csproj.CoreCompileInputs.cache
+C:\Users\Иван\source\repos\Homework_19\Homework_19_Logics\bin\Debug\Homework_19_Logics.dll
+C:\Users\Иван\source\repos\Homework_19\Homework_19_Logics\bin\Debug\Homework_19_Logics.pdb
+C:\Users\Иван\source\repos\Homework_19\Homework_19_Logics\obj\Debug\Homework_19_Logics.dll
+C:\Users\Иван\source\repos\Homework_19\Homework_19_Logics\obj\Debug\Homework_19_Logics.pdb
+C:\Users\Иван\source\repos\Homework_19\Homework_19_Logics\bin\Debug\Library.dll
+C:\Users\Иван\source\repos\Homework_19\Homework_19_Logics\bin\Debug\Library.pdb
+C:\Users\Иван\source\repos\Homework_19\Homework_19_Logics\obj\Debug\Homework_19_Logics.csproj.CopyComplete
