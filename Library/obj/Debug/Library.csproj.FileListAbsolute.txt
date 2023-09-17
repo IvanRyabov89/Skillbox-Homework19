@@ -1,0 +1,6 @@
+C:\Users\Иван\source\repos\Homework_19\Library\bin\Debug\Library.dll
+C:\Users\Иван\source\repos\Homework_19\Library\bin\Debug\Library.pdb
+C:\Users\Иван\source\repos\Homework_19\Library\obj\Debug\Library.csproj.AssemblyReference.cache
+C:\Users\Иван\source\repos\Homework_19\Library\obj\Debug\Library.csproj.CoreCompileInputs.cache
+C:\Users\Иван\source\repos\Homework_19\Library\obj\Debug\Library.dll
+C:\Users\Иван\source\repos\Homework_19\Library\obj\Debug\Library.pdb
