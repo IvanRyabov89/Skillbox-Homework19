@@ -1,2 +1,0 @@
-C:\Users\Иван\source\repos\Homework_19\Homework_19_Logics\obj\Debug\Homework_19_Logics.csproj.AssemblyReference.cache
-C:\Users\Иван\source\repos\Homework_19\Homework_19_Logics\obj\Debug\Homework_19_Logics.csproj.CoreCompileInputs.cache
