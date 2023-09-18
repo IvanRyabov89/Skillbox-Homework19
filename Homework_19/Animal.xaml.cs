@@ -43,15 +43,18 @@ namespace Homework_19
         private void Add_Click(object sender, RoutedEventArgs e)
         {
             Animal animal = new Animal();
-            AddModel addModel = new AddModel();
-            AddAnimal add = new AddAnimal(animal, model, addModel);
+            AddAnimal add = new AddAnimal(animal, model, addModel1);
             add.ShowDialog();
+            //list2 = addModel1.Fauna();
+            ListFauna.Items.Refresh();
+            //ListFauna.ItemsSource = addModel1.Fauna();
+
         }
         public void AddFauna(IFauna fauna)
         {
             //list2.Add(fauna);
           
-            addModel1.Fauna().Add(fauna);
+            //addModel1.Fauna().Add(fauna);
         }
 
         private void saveAnimal_Click(object sender, RoutedEventArgs e)
@@ -63,6 +66,8 @@ namespace Homework_19
         {
             return  addModel1.Fauna();
         }
+
+       
 
     }
 }

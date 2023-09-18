@@ -48,6 +48,7 @@ namespace Homework_19
         private void Cancel_Click(object sender, RoutedEventArgs e)
         {
             Close();
+            
         }
     }
 }
